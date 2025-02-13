@@ -1,3 +1,3 @@
 ## Currently at
 
-Comparing the Guess to the Secret Number
+Chapter 2 complete, refactoring left
