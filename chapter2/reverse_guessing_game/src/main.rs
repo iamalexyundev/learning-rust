@@ -23,7 +23,7 @@ fn main() {
             println!("The number is out of range");
             continue;
         }
-        let mut guess = 50;
+        let mut guess = rand::rng().random_range(range);
         let mut last_guess_change_amount = 0;
         loop {
             println!("Computer guess is {guess}");
