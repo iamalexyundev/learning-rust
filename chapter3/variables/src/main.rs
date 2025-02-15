@@ -5,7 +5,7 @@ fn main() {
     // x = 6;
     // println!("The value of x is: {x}");
     // println!("3 hours in seconds is: {THREE_HOURS_IN_SECONDS}")
-
+    //Shadowing
     let x = 5;
     let x = x + 1;
     {
