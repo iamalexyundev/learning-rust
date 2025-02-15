@@ -1,3 +1,3 @@
 ## Currently at
 
-Chapter 3: Numeric Operations
+Chapter 3.3: Statements and Expressions
