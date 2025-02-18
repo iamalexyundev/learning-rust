@@ -11,3 +11,5 @@ In Chapter 3, created the following projects:
 - Christmas song in Chapter 3
 
 ## Currently at
+
+Chapter 4.3: The Slice Type
