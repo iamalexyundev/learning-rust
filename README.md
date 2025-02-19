@@ -12,4 +12,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 5: Defining and Instantiating Structs
+Chapter 5.3: Method Syntax
