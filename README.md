@@ -12,4 +12,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 4.3: String Slices
+Chapter 5: Using Structs to Structure Related Data
