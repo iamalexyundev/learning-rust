@@ -12,4 +12,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 6: Enums and Pattern Matching
+Chapter 6.1: The Option Enum and Its Advantages Over Null Values
