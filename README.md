@@ -6,14 +6,12 @@ In Chapter 3, created the following projects:
 
 - [Temperature converter](https://github.com/iamalexyundev/temp_converter)
 
+  - [Rewrite temp converter using enums](https://github.com/iamalexyundev/temp_converter/tree/using_enums)
+
 - [nth Fibonacci number generator](https://github.com/iamalexyundev/nth-fibonacci-rust)
 
 - Christmas song in Chapter 3
 
 ## Currently at
 
-Chapter 6.2: Matching with Option<T>
-
-### End of chapter plan
-
-- Rewrite temp converter using enums
+Chapter 7: Managing Growing Projects with Packages, Crates, and Modules
