@@ -12,4 +12,8 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 6.1: The Option Enum and Its Advantages Over Null Values
+Chapter 6.2: Matching with Option<T>
+
+### End of chapter plan
+
+- Rewrite temp converter using enums

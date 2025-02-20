@@ -1,4 +1,3 @@
-#![allow(dead_code, unused_variables)]
 enum IpAddrKind {
     V4(u8, u8, u8, u8),
     V6(String),
@@ -15,6 +14,7 @@ impl Message {
         println!("{:?}", self);
     }
 }
+
 fn main() {
     let four = IpAddrKind::V4;
     let six = IpAddrKind::V6;
@@ -25,4 +25,10 @@ fn main() {
 
     let m = Message::Write(String::from("HELLO"));
     m.call();
+
+    let some_number = Some(5);
+    let some_str = Some("string slice");
+
+    let absent_number: Option<i32> = None;
+    println!("{}", some_number.is_none());
 }
