@@ -14,4 +14,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 7: Managing Growing Projects with Packages, Crates, and Modules
+Chapter 7.3: Paths for Referring to an Item in the Module Tree
