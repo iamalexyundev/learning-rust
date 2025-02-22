@@ -14,4 +14,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 8.1: Reading Elements of Vectors
+Chapter 8.2: Storing UTF-8 Encoded Text with Strings
