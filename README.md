@@ -14,4 +14,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 7: Managing Growing Projects with Packages, Crates, and Modules (review)
+Chapter 8: Common Collections
