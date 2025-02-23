@@ -36,5 +36,13 @@ fn main() {
         SpreadsheetCell::Text(String::from("blue")),
         SpreadsheetCell::Float(10.12),
     ];
-    println!("{row:?}")
+    println!("{row:?}");
+
+    let my_string = String::from("hello world");
+    let another_string;
+    {
+        let mut my_strings = vec![];
+        my_strings.push(&my_string);
+        another_string = my_strings[0];
+    }
 }

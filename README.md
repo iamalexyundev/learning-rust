@@ -14,4 +14,4 @@ In Chapter 3, created the following projects:
 
 ## Currently at
 
-Chapter 8.2: Concatenation with the + Operator or the format! Macro
+Chapter 8.3: Storing Keys with Associated Values in Hash Maps
