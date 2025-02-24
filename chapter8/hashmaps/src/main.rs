@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash};
+use std::collections::HashMap;
 fn main() {
     create_hash_map_and_get_item();
     zip_hash_map();
