@@ -1,3 +1,5 @@
+use std::char;
+
 fn main() {
     let sentence = String::from("hello world apple square"); //->ello-hay orld-way
     let pig_latin_sentence = pig_latin(&sentence);
@@ -7,19 +9,20 @@ fn main() {
 fn pig_latin(sentence: &str) -> String {
     let mut pig_latin_sentence = String::new();
     for word in sentence.split_whitespace() {
-        let mut chars: Vec<char> = word.chars().collect();
-        let pig_latin_word = match chars[0] {
-            'a' | 'e' | 'i' | 'o' | 'u' => word.to_string() + "-hay",
-            _ => {
-                let first_letter = chars.remove(0);
-                let mut word: String = chars.iter().collect();
-                word += "-";
-                word.push(first_letter);
-                word + "ay"
-            }
-        };
-        pig_latin_sentence.push_str(&pig_latin_word);
+        let mut word = word.to_string();
+        let first_letter = word.remove(0);
+        if is_vovel(first_letter) {
+            pig_latin_sentence.push_str(&(first_letter.to_string() + &word + "-hay"));
+        } else {
+            word.push('-');
+            word.push(first_letter);
+            pig_latin_sentence.push_str(&(word.to_string() + "ay"));
+        }
         pig_latin_sentence.push(' ');
     }
     pig_latin_sentence
+}
+
+fn is_vovel(c: char) -> bool {
+    c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
 }
