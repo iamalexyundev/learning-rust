@@ -10,13 +10,15 @@ In Chapter 3, created the following projects:
 
 - [nth Fibonacci number generator](https://github.com/iamalexyundev/nth-fibonacci-rust)
 
-- Christmas song in Chapter 3
+- [Christmas song in Chapter 3](https://github.com/iamalexyundev/learning-rust/tree/main/chapter3/twelve_days)
+
+In Chapter 8, created the following projects:
+
+- [Given a list of integers, use a vector and return the median (when sorted, the value in the middle position) and mode (the value that occurs most often; a hash map will be helpful here) of the list.](https://github.com/iamalexyundev/learning-rust/tree/main/chapter8/list_of_numbers)
 
 ## Currently at
 
 Chapter 8.3: Summary
-
-- Given a list of integers, use a vector and return the median (when sorted, the value in the middle position) and mode (the value that occurs most often; a hash map will be helpful here) of the list.
 
 - Convert strings to pig latin. The first consonant of each word is moved to the end of the word and ay is added, so first becomes irst-fay. Words that start with a vowel have hay added to the end instead (apple becomes apple-hay). Keep in mind the details about UTF-8 encoding!
 
