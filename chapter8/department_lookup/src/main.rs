@@ -9,13 +9,17 @@ enum Command {
 }
 impl Command {
     fn parse_command(command_parts: Vec<&str>) -> Option<Command> {
+        if command_parts.is_empty() {
+            println!("Please input a command `add` or `get`");
+            return None;
+        }
         let action = command_parts[0].to_lowercase();
         match action.as_str() {
             "add" => parse_add(&command_parts),
             "get" => parse_get(&command_parts),
             "q" | "quit" => Some(Command::Quit),
             _ => {
-                println!("Unknown command");
+                println!("Unknown command: Use `add` or `get`");
                 None
             }
         }
@@ -26,7 +30,7 @@ fn main() {
     println!("Welcome to the Department Lookup!");
     let mut departments: HashMap<String, Vec<String>> = HashMap::new();
     loop {
-        println!("What would you like to do? [add, get, or remove] employee(s)");
+        println!("What would you like to do? [add or get] employee(s)");
         let raw_input = get_raw_input();
         let command_parts: Vec<&str> = raw_input.split_whitespace().collect();
         let command = Command::parse_command(command_parts);
@@ -35,10 +39,34 @@ fn main() {
         }
         match command.unwrap() {
             Command::Add { name, department } => {
-                departments.entry(department).or_default().push(name);
+                departments
+                    .entry(department.clone()) //should i clone here?
+                    .or_default()
+                    .push(name.clone()); //should i clone here?
+                println!("Added {name} to {department}")
+            }
+            Command::Get(department) => {
+                let names = departments.get(&department);
+                match names {
+                    Some(names) => {
+                        println!("List of all employees from {department}:");
+                        names.iter().for_each(|name| println!("{name}"));
+                    }
+                    None => {
+                        println!("The `{department}` department does not exist");
+                        continue;
+                    }
+                }
+            }
+            Command::GetAll => {
+                let mut all_employees = vec![];
+                departments
+                    .iter()
+                    .for_each(|department| all_employees.extend(department.1));
+                println!("List of all employees from all departments:");
+                all_employees.iter().for_each(|name| println!("{name}"));
             }
             Command::Quit => std::process::exit(1),
-            _ => todo!(),
         }
     }
 }
@@ -51,9 +79,9 @@ fn get_raw_input() -> String {
     buffer.trim().to_owned()
 }
 
-fn parse_add(command_parts: &Vec<&str>) -> Option<Command> {
-    if command_parts.len() < 4 || !command_parts.contains(&"to") || command_parts.len() > 4 {
-        println!("Wrong format! Usage: add name to department");
+fn parse_add(command_parts: &[&str]) -> Option<Command> {
+    if command_parts.len() != 4 || command_parts[2] != "to" {
+        println!("Usage: `add name to department`");
         None
     } else {
         let name = command_parts[1].to_owned();
@@ -62,6 +90,20 @@ fn parse_add(command_parts: &Vec<&str>) -> Option<Command> {
     }
 }
 
-fn parse_get(command_parts: &Vec<&str>) -> Option<Command> {
-    Some(Command::Get("GWET".to_owned()))
+fn parse_get(command_parts: &[&str]) -> Option<Command> {
+    match command_parts.len() {
+        2 => Some(Command::GetAll),
+        4 => {
+            if command_parts.contains(&"from") {
+                Some(Command::Get(command_parts[3].to_owned()))
+            } else {
+                println!("Usage: `get all from department`");
+                None
+            }
+        }
+        _ => {
+            println!("Usage: `get all from department` or `get all`");
+            None
+        }
+    }
 }
