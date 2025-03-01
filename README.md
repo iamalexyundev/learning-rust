@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 8.3: Summary
+Chapter 9: Error Handling

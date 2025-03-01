@@ -34,39 +34,44 @@ fn main() {
         let raw_input = get_raw_input();
         let command_parts: Vec<&str> = raw_input.split_whitespace().collect();
         let command = Command::parse_command(command_parts);
-        if command.is_none() {
-            continue;
-        }
-        match command.unwrap() {
-            Command::Add { name, department } => {
-                departments
-                    .entry(department.clone()) //should i clone here?
-                    .or_default()
-                    .push(name.clone()); //should i clone here?
-                println!("Added {name} to {department}")
+        match command {
+            None => {
+                continue;
             }
-            Command::Get(department) => {
-                let names = departments.get(&department);
-                match names {
-                    Some(names) => {
-                        println!("List of all employees from {department}:");
-                        names.iter().for_each(|name| println!("{name}"));
+            Some(command) => {
+                match command {
+                    Command::Add { name, department } => {
+                        departments
+                            .entry(department) //should i clone here?
+                            .or_default()
+                            .push(name); //should i clone here?
+                        // println!("Added {name} to {department}")
                     }
-                    None => {
-                        println!("The `{department}` department does not exist");
-                        continue;
+                    Command::Get(department) => {
+                        let names = departments.get(&department);
+                        match names {
+                            Some(names) => {
+                                println!("List of all employees from {department}:");
+                                names.iter().for_each(|name| println!("{name}"));
+                            }
+                            None => {
+                                println!("The `{department}` department does not exist");
+                                continue;
+                            }
+                        }
                     }
+                    Command::GetAll => {
+                        let mut all_employees = vec![];
+                        departments
+                            .iter()
+                            .for_each(|department| all_employees.extend(department.1));
+                        println!("List of all employees from all departments:");
+                        all_employees.sort_by_key(|s| s.to_lowercase());
+                        all_employees.iter().for_each(|name| println!("{name}"));
+                    }
+                    Command::Quit => std::process::exit(1),
                 }
             }
-            Command::GetAll => {
-                let mut all_employees = vec![];
-                departments
-                    .iter()
-                    .for_each(|department| all_employees.extend(department.1));
-                println!("List of all employees from all departments:");
-                all_employees.iter().for_each(|name| println!("{name}"));
-            }
-            Command::Quit => std::process::exit(1),
         }
     }
 }
