@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 9.2: A Shortcut for Propagating Errors: the ? Operator
+Chapter 9.3: To panic! or Not to panic!
