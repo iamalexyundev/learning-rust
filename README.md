@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 9: Error Handling
+Chapter 9.2: Shortcuts for Panic on Error: unwrap and expect
