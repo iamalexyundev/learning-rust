@@ -1,4 +1,7 @@
-use std::{fs::File, io::ErrorKind};
+use std::{
+    fs::File,
+    io::{ErrorKind, Read},
+};
 fn main() {
     let greeting_file_result = File::open("hello.txt");
     let greeting_file = match greeting_file_result {
@@ -13,5 +16,8 @@ fn main() {
             }
         },
     };
-    println!("{:?}", greeting_file)
+    println!("{:?}", greeting_file);
+
+    let panic_on_openning =
+        File::open("panic.txt").expect("panic.txt should be included in this project");
 }
