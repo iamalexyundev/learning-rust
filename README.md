@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 9.3: To panic! or Not to panic!
+Chapter 10: Generic Types, Traits, and Lifetimes
