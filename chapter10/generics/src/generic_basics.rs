@@ -36,7 +36,7 @@ fn largest_char(list: &Vec<char>) -> &char {
     largest
 }
 
-fn largest<T: std::cmp::PartialOrd>(list: &Vec<T>) -> &T {
+fn largest<T: PartialOrd>(list: &Vec<T>) -> &T {
     let mut largest = &list[0];
     for item in list {
         if item > largest {
