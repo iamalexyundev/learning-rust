@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 10: Generic Types, Traits, and Lifetimes
+Chapter 10.2: Traits: Defining Shared Behavior
