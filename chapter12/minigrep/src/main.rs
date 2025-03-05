@@ -1,37 +1,16 @@
-use std::{env, fs};
-
+use minigrep::{Config, run};
+use std::{env, process};
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let config = parse_config(&args);
+    let config = Config::build(&args).unwrap_or_else(|err| {
+        println!("Problem parsing arguments:\n{err}");
+        process::exit(1)
+    });
 
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.file_path);
-
-    let contents =
-        fs::read_to_string(config.file_path).expect("Should have been able to read the file");
-    println!("With text:\n{contents}");
-}
-
-//more efficient with lifetimes
-struct Config<'a> {
-    query: &'a str,
-    file_path: &'a str,
-}
-fn parse_config(args: &[String]) -> Config {
-    Config {
-        query: &args[1],
-        file_path: &args[2],
+    if let Err(e) = run(config) {
+        println!("Application error: {e}");
+        process::exit(2)
     }
 }
-//inefficient way
-// struct Config {
-//     query: String,
-//     file_path: String,
-// }
-// fn parse_config(args: &[String]) -> Config {
-//     Config {
-//         query: args[1].clone(),
-//         file_path: args[2].clone(),
-//     }
-// }
+//function does not return anything

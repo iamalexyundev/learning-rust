@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 12: An I/O Project: Building a Command Line Program
+Chapter 12.5: Working with Environment Variables
