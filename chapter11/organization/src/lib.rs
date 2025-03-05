@@ -8,7 +8,6 @@ fn internal_adder(left: usize, right: usize) -> usize {
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
     fn internal() {
         let result = internal_adder(2, 2);
