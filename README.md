@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 10.3: Thinking in Terms of Lifetimes
+Chapter 11: Writing Automated Tests
