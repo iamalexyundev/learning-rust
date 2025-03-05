@@ -1,3 +1,4 @@
+mod test;
 struct Rectangle {
     width: u32,
     height: u32,
@@ -71,7 +72,6 @@ mod tests {
         let fail = false;
         if fail {
             panic!("This test will fail!")
-        } else {
         }
     }
     #[test]
