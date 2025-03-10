@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 14.3: Depending on an External Package in a Workspace
+Chapter 15.1: Using Box<T> to Get a Recursive Type with a Known Size
