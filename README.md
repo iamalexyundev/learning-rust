@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 13.1: Capturing References or Moving Ownership
+Chapter 14.3: Depending on an External Package in a Workspace
