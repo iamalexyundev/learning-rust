@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 15.1: Using Box<T> to Get a Recursive Type with a Known Size
+Chapter 15.2: Implicit Deref Coercions with Functions and Methods
