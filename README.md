@@ -23,3 +23,9 @@ In Chapter 8, created the following projects:
 ## Currently at
 
 Chapter 15.5: RefCell<T> and the Interior Mutability Pattern
+
+## Need to review
+
+Chapter 15: Smart Pointer
+
+## [Learn more at The Rustonomicon](https://doc.rust-lang.org/nomicon/index.html)
