@@ -22,4 +22,4 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 15.2: Implicit Deref Coercions with Functions and Methods
+Chapter 15.5: RefCell<T> and the Interior Mutability Pattern
