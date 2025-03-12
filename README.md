@@ -22,11 +22,13 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 16.2: Sending Multiple Values and Seeing the Receiver Waiting
+Chapter 17: Fundamentals of Asynchronous Programming: Async, Await, Futures, and Streams
 
 ## Need to review
 
 Chapter 13: Iterators
 Chapter 15: Smart Pointers
+`iter(), into_iter()`
+`std::sync::atomic`
 
 ## [Learn more at The Rustonomicon](https://doc.rust-lang.org/nomicon/index.html)
