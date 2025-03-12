@@ -22,7 +22,7 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 16.2: Using Message Passing to Transfer Data Between Threads
+Chapter 16.2: Sending Multiple Values and Seeing the Receiver Waiting
 
 ## Need to review
 
