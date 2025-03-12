@@ -26,9 +26,10 @@ Chapter 17: Fundamentals of Asynchronous Programming: Async, Await, Futures, and
 
 ## Need to review
 
-Chapter 13: Iterators
-Chapter 15: Smart Pointers
-`iter(), into_iter()`
-`std::sync::atomic`
+- Chapter 13: Iterators
+- Chapter 15: Smart Pointers
+- `iter(), into_iter()`
+- `std::sync::atomic`
+- `RefCall<T>, Rc<T>, Mutex<T>, Arc<T>`
 
 ## [Learn more at The Rustonomicon](https://doc.rust-lang.org/nomicon/index.html)
