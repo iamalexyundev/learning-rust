@@ -22,10 +22,11 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 15.5: RefCell<T> and the Interior Mutability Pattern
+Chapter 16.2: Using Message Passing to Transfer Data Between Threads
 
 ## Need to review
 
-Chapter 15: Smart Pointer
+Chapter 13: Iterators
+Chapter 15: Smart Pointers
 
 ## [Learn more at The Rustonomicon](https://doc.rust-lang.org/nomicon/index.html)
