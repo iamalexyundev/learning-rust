@@ -22,12 +22,14 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 17: Fundamentals of Asynchronous Programming: Async, Await, Futures, and Streams
+Chapter 18.3: Adding approve to Change the Behavior of content
 
 ## Need to review
 
 - Chapter 13: Iterators
 - Chapter 15: Smart Pointers
+- Chapter 17: Fundamentals of Asynchronous Programming: Async, Await, Futures, and Streams
+- [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
 - `iter(), into_iter()`
 - `std::sync::atomic`
 - `RefCall<T>, Rc<T>, Mutex<T>, Arc<T>`
