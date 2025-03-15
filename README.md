@@ -22,7 +22,7 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 18.3: Adding approve to Change the Behavior of content
+Chapter 19.2: Refutability: Whether a Pattern Might Fail to Match
 
 ## Need to review
 
