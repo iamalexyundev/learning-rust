@@ -22,7 +22,7 @@ In Chapter 8, created the following projects:
 
 ## Currently at
 
-Chapter 19.2: Refutability: Whether a Pattern Might Fail to Match
+Chapter 20.1: Using extern Functions to Call External Code
 
 ## Need to review
 
